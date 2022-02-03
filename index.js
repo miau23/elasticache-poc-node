@@ -8,8 +8,10 @@ const REDIS_PORT = process.env.PORT || 6379;
 const client = redis.createClient({ 
     host: '172.31.35.219',
     port: 6379,
+    hostname: 'uthrive-redis-staging.8e36mf.clustercfg.use1.cache.amazonaws.com:6379 '
 });
 
+//client = redis.Redis.from_url()
 await client.connect();
 
 const app = express(); 
