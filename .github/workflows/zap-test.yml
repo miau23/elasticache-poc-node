@@ -11,11 +11,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          docker_name: "owasp/zap2docker-stable"
-          target: "https://example.com"
-          cmd_options: '-z "-configFile /zap/wrk/options.prop"'
+          docker_name: 'owasp/zap2docker-stable'
+          target: 'https://www.zaproxy.org'
+          rules_file_name: '.zap/rules.tsv'
+          cmd_options: '-a'
