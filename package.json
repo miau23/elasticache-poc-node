@@ -13,7 +13,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "i": "^0.3.7",
-    "node-fetch": "^3.2.0",
+    "node-fetch": "^3.2.10",
     "redis": "^4.0.2"
   },
   "devDependencies": {
